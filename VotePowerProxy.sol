@@ -19,13 +19,12 @@ contract VotePowerProxy is Ownable {
         return IVotingPower(VotingPowerContract).getCopeVaultBalance(_user);
     }
 
-
     function getCopePoolBalance(address _user) external view returns (uint256) {
         return IVotingPower(VotingPowerContract).getCopePoolBalance(_user);
     }
 
     function getCopeEthLpBalance(address _user) external view returns (uint256) {
-        return IVotingPower(VotingPowerContract).getCopeBnbLpBalance(_user);
+        return IVotingPower(VotingPowerContract).getCopeEthLpBalance(_user);
     }
 
     function getPoolsBalance(address _user, address[] memory _pools) external view returns (uint256) {
