@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: Frensware
 pragma solidity ^0.8.0;
 
 import "./Ownable.sol";
@@ -19,15 +19,12 @@ contract VotePowerProxy is Ownable {
         return IVotingPower(VotingPowerContract).getCopeVaultBalance(_user);
     }
 
-    function getIFOPoolBalancee(address _user) external view returns (uint256) {
-        return IVotingPower(VotingPowerContract).getIFOPoolBalancee(_user);
-    }
 
     function getCopePoolBalance(address _user) external view returns (uint256) {
         return IVotingPower(VotingPowerContract).getCopePoolBalance(_user);
     }
 
-    function getCopeBnbLpBalance(address _user) external view returns (uint256) {
+    function getCopeEthLpBalance(address _user) external view returns (uint256) {
         return IVotingPower(VotingPowerContract).getCopeBnbLpBalance(_user);
     }
 
